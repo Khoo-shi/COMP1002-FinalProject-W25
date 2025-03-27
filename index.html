@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaroid Website</title>
+    <link rel="stylesheet" href="Navbar/navbar.css"> 
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar (Dynamically Inserted) -->
+    <div id="navbar"></div>
+
+    <div class="container">
+        <div class="left">
+            <h1>Capture Moments Instantly</h1>
+            <p>Experience the magic of instant photography with Polaroid. Create tangible memories that develop right before your eyes.</p>
+            <div class="buttons">
+                <a href="/Product/Product.html" class="shop">Shop Cameras</a>
+                <a href="/About/About.html" class="explore">Explore Film</a>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <video src="videos/Video1.mp4" autoplay muted loop preload="auto"></video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video src="videos/Video2.mp4" autoplay muted loop preload="auto"></video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video src="videos/Video3.mp4" autoplay muted loop preload="auto"></video>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="features">
+        <div class="feature">
+            <img src="images/Instant Memories.jpg" alt="Instant Memories">
+            <h3>Instant Memories</h3>
+            <p>Photos that develop before your eyes</p>
+        </div>
+        <div class="feature">
+            <img src="images/Iconic Design.jpg" alt="Iconic Design">
+            <h3>Iconic Design</h3>
+            <p>Timeless cameras that stand out</p>
+        </div>
+        <div class="feature">
+            <img src="images/Creative Freedom.jpg" alt="Creative Freedom">
+            <h3>Creative Freedom</h3>
+            <p>Express yourself through analog photography</p>
+        </div>
+    </section>
+
+    <section class="polaroid-section">
+        <div class="polaroid-container">
+            <div class="polaroid-text">
+                <span class="badge">New Release</span>
+                <h1>Introducing the Polaroid Now</h1>
+                <p>
+                    Our most creative instant camera yet, featuring autofocus, double exposure, and self-timer in a classic Polaroid form.
+                </p>
+                <ul>
+                    <li><span class="dot pink"></span> Autofocus two-lens system</li>
+                    <li><span class="dot blue"></span> Built-in double exposure</li>
+                    <li><span class="dot yellow"></span> Self-timer and accurate flash</li>
+                </ul>
+                <a href="#" class="shop-btn">Shop Polaroid Now</a>
+            </div>
+            <div class="polaroid-image">
+                <img src="images/Polaroid Now.jpg" alt="Polaroid Camera">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="product-line">
+        <h2><i>OUR PRODUCT LINE</i></h2>
+        <p>Elevate your photography experience with our carefully curated selection of Polaroid cameras</p>
+    
+        <div class="product-gallery">
+            <div class="product">
+                <img src="images/Person1.jpg" alt="Polaroid Camera">
+                <p>Polaroid</p>
+            </div>
+            <div class="product">
+                <img src="images/Person2.jpg" alt="Polaroid Camera">
+                <p>Polaroid</p>
+            </div>
+            <div class="product">
+                <img src="images/Person3.jpg" alt="Polaroid Camera">
+                <p>Polaroid</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand Section -->
+                <div class="footer-section about">
+                    <h2>Polaroid Camera</h2>
+                    <p>Creating memories since 1948</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/About/About.html">About</a></li>
+                        <li><a href="/Product/Product.html">Services</a></li>
+                        <li><a href="/Contact/Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-section social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Polaroid Camera. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: false, // Manual autoplay control
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            on: {
+                slideChangeTransitionEnd: function () {
+                    let videos = document.querySelectorAll(".swiper-slide video");
+                    videos.forEach((video) => video.pause()); // Pause all videos
+
+                    let activeSlide = document.querySelector(".swiper-slide-active video");
+                    if (activeSlide) {
+                        activeSlide.currentTime = 0; // Reset video
+                        activeSlide.play(); // Play only active video
+                    }
+                }
+            }
+        });
+    </script>
+
+    
+    
+    <script src="Navbar/navbar.js"></script> 
+</body>
+</html>

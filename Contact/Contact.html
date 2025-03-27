@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../Navbar/navbar.css">
+    <link rel="stylesheet" href="Contact.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Leaflet.js Library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Contact Page Container -->
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p class="subtitle">Have questions about our products or need assistance? We're here to help. Reach out to our team using the form below.</p>
+
+        <div class="contact-section">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send us a message</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label>First Name *</label>
+                        <input type="text" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name *</label>
+                        <input type="text" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>Subject *</label>
+                        <select required>
+                            <option>Select a subject</option>
+                            <option>Product Inquiry</option>
+                            <option>Support Request</option>
+                            <option>Business Collaboration</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea placeholder="Please describe your inquiry in detail..." required></textarea>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" required>
+                        <label>I agree to the Privacy Policy and consent to having my data processed.</label>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Get in touch</h2>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>Mon-Fri from 8am to 5pm</p>
+                        <p>+1 (800) 343-5000</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>We'll respond as soon as possible</p>
+                        <p>support@polaroid.com</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Office</h3>
+                        <p>1100 Technology Park Drive</p>
+                        <p>Westborough, MA 01581</p>
+                        <p>United States</p>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Find Us (Interactive Map Placeholder) -->
+        <section class="find-us">
+            <h2>Find us</h2>
+            <div id="map"></div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Find quick answers to common questions about our products and services.</p>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>How long does shipping take?</h3>
+                    <p>Standard shipping typically takes 3-5 business days within the continental US. Express shipping options are available at checkout for faster delivery.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>What's your return policy?</h3>
+                    <p>We offer a 30-day return policy for most products in their original condition. Please contact our customer service team to initiate a return.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>Do you offer international shipping?</h3>
+                    <p>Yes, we ship to most countries worldwide. International shipping times and fees vary by location and will be calculated at checkout.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>How do I register my product warranty?</h3>
+                    <p>You can register your product warranty by creating an account and entering your product's serial number in the "My Products" section of your account dashboard.</p>
+                </div>
+            </div>
+            <button class="faq-btn">View All FAQs</button>
+        </section>
+    </div>
+
+    <script src="Contact.js"></script>
+
+</body>
+</html>

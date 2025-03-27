@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(to right, #fff, #ffffff);
+}
+
+/* Navbar */
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* Content */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 80px 20px 20px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    flex-wrap: wrap; /* Responsive wrapping */
+}
+
+/* Left Section */
+.left {
+    flex: 1;
+    padding: 20px;
+    min-width: 300px; /* Ensure a minimum width */
+}
+
+.left h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.left p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.shop {
+    background-color: #00aaff;
+    color: white;
+}
+
+.explore {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+/* Swiper Section */
+.right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    min-width: 300px; /* Ensure a minimum width */
+}
+
+.swiper {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: black;
+}
+
+.swiper-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 60px 0;
+    margin-bottom: 6%;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.feature {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.feature img {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+.feature p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Polaroid Section */
+.polaroid-section {
+    background-color: black;
+    color: white;
+    padding: 80px 10%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6%;
+}
+
+.polaroid-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+}
+
+.polaroid-text {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.badge {
+    background-color: hotpink;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.polaroid-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.polaroid-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.polaroid-text ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.polaroid-text ul li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pink { background-color: hotpink; }
+.blue { background-color: deepskyblue; }
+.yellow { background-color: gold; }
+
+.shop-btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.shop-btn:hover {
+    background-color: lightgray;
+}
+
+.polaroid-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e6e6e6;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.polaroid-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Gallery */
+.product-line {
+    text-align: center;
+    background: white;
+    padding: 50px 20px;
+}
+
+.product-line h2 {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.product-line p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.product-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Make it responsive */
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #666;
+}
+
+/* RESPONSIVENESS */
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left, .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left h1, .polaroid-text h1 {
+        font-size: 32px;
+    }
+
+    .left p, .polaroid-text p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .polaroid-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .polaroid-text {
+        padding: 0;
+    }
+
+    .polaroid-image img {
+        width: 90%;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .left h1 {
+        font-size: 28px;
+    }
+
+    .left p {
+        font-size: 14px;
+    }
+
+    .shop-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.footer-section h2, .footer-section h3 {
+    color: #f4a261;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f4a261;
+}
+
+.footer-section .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ddd;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-section .social-icons a:hover {
+    color: #f4a261;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
