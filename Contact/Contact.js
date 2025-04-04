@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    L.marker([42.364506, -71.038887]).addTo(map)
-        .bindPopup("Our Location")
-        .openPopup();
+    L.marker([44.3894, -79.6903]).addTo(map)
+    .bindPopup("Georgian College, Barrie")
+    .openPopup();
 });
 
